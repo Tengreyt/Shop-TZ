@@ -1,6 +1,6 @@
 <template>
-  <v-card height="493px">
-    <v-img :src="product.images[0]" height="180px" cover></v-img>
+  <v-card height="500px">
+    <v-img :src="product.images[0]" height="160px" cover></v-img>
     <v-card-title class="text-h6">{{ product.title }}</v-card-title>
     <v-card-subtitle class="text-h6">{{ product.price }}$</v-card-subtitle>
     
