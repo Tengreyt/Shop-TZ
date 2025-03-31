@@ -70,7 +70,6 @@ const tab = ref('details');
 }
 
 .tab-content-card {
-  min-height: 220px; /* Увеличена высота карточки */
   padding: 16px;
   margin-top: 4px;
   border-radius: 0 0 8px 8px;
@@ -78,7 +77,7 @@ const tab = ref('details');
 }
 
 .tab-content {
-  padding: 12px 16px;
+  padding: 8px 10px;
 }
 
 .description-text {
