@@ -23,7 +23,7 @@
       <v-window v-model="tab">
         <v-window-item value="details">
           <v-card-text class="tab-content description-text">
-            {{ product.description || "Нет описания" }}
+            {{ truncatedDescription }}
           </v-card-text>
         </v-window-item>
         <v-window-item value="specs">
@@ -52,7 +52,7 @@
 </template>
 
 <script setup>
-import { ref } from 'vue';
+import { ref, computed } from 'vue';
 
 const props = defineProps({
   product: {
@@ -62,6 +62,11 @@ const props = defineProps({
 });
 
 const tab = ref('details');
+
+const truncatedDescription = computed(() => {
+  const desc = props.product.description || "Нет описания";
+  return desc.length > 50 ? `${desc.substring(0, 47)}...` : desc;
+});
 </script>
 
 <style scoped>
@@ -70,6 +75,7 @@ const tab = ref('details');
 }
 
 .tab-content-card {
+  min-height: 170px;
   padding: 16px;
   margin-top: 4px;
   border-radius: 0 0 8px 8px;
