@@ -3,7 +3,6 @@
     <h1 class="text-h4 mb-6">Каталог товаров</h1>
     
     <ProductSlider v-if="featuredProducts.length" :products="featuredProducts" />
-    
     <v-row>
       <v-col 
         v-for="product in products" 

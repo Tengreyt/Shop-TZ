@@ -65,7 +65,7 @@ const tab = ref('details');
 
 const truncatedDescription = computed(() => {
   const desc = props.product.description || "Нет описания";
-  return desc.length > 50 ? `${desc.substring(0, 47)}...` : desc;
+  return desc.length > 100 ? `${desc.substring(0, 47)}...` : desc;
 });
 </script>
 
@@ -76,7 +76,7 @@ const truncatedDescription = computed(() => {
 
 .tab-content-card {
   min-height: 170px;
-  padding: 16px;
+  padding: 10px;
   margin-top: 4px;
   border-radius: 0 0 8px 8px;
   box-shadow: 0 2px 8px rgba(0,0,0,0.1);
