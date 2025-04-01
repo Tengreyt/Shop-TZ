@@ -65,7 +65,7 @@ const tab = ref('details');
 
 const truncatedDescription = computed(() => {
   const desc = props.product.description || "Нет описания";
-  return desc.length > 100 ? `${desc.substring(0, 47)}...` : desc;
+  return desc.length > 100 ? `${desc.substring(0, 107)}...` : desc;
 });
 </script>
 
