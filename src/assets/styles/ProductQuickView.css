@@ -1,0 +1,59 @@
+.quick-view-container {
+    position: relative;
+    min-height: 500px;
+}
+
+.close-btn {
+  position: absolute;
+  right: 16px;
+  top: 16px;
+  z-index: 2;
+  background: rgba(255, 255, 255, 0.9);
+}
+
+.close-btn:hover {
+  background: rgba(0, 0, 0, 0.05);
+}
+
+.product-gallery {
+  flex: 1;
+  min-width: 300px;
+}
+
+.product-info {
+  flex: 1;
+  min-width: 300px;
+}
+
+.detail-item {
+  display: flex;
+  margin-bottom: 8px;
+}
+
+.detail-label {
+  font-weight: bold;
+  margin-right: 8px;
+  min-width: 100px;
+}
+
+.actions {
+  display: flex;
+  gap: 12px;
+}
+
+
+@media (max-width: 960px) {
+  .product-gallery {
+    margin-right: 0;
+  }
+  
+  .actions {
+    flex-direction: column;
+    gap: 8px;
+  }
+  
+  .close-btn {
+    right: 8px;
+    top: 8px;
+  }
+}

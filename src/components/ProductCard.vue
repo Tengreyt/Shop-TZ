@@ -1,8 +1,8 @@
 <template>
-  <v-card height="522px">
-    <v-img :src="product.images[0]" height="160px" cover></v-img>
-    <v-card-title class="text-h6">{{ product.title }}</v-card-title>
-    <v-card-subtitle class="text-h6">{{ product.price }}$</v-card-subtitle>
+  <v-card class="product-card">
+    <v-img :src="product.images[0]" cover class="product-image"></v-img>
+    <v-card-title class="product-title">{{ product.title }}</v-card-title>
+    <v-card-subtitle class="product-price">{{ product.price }}$</v-card-subtitle>
     
     <ProductTabs :product="product" />
     
@@ -10,7 +10,7 @@
       @click="$emit('order', product)" 
       color="primary" 
       block 
-      class="mt-4"
+      class="order-btn"
     >
       Заказать
     </v-btn>
@@ -29,3 +29,7 @@ defineProps({
 
 defineEmits(['order']);
 </script>
+
+<style scoped>
+@import '../assets/styles/ProductCard.css';
+</style>

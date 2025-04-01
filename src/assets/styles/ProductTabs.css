@@ -1,0 +1,166 @@
+.product-tabs-container {
+  margin-top: 12px;
+}
+
+.tab-content-card {
+  min-height: 170px;
+  padding: 10px 10px 5px 10px;
+  margin-top: 4px;
+  border-radius: 0 0 8px 8px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+.tab-content {
+  padding: 8px 10px;
+}
+
+.description-text {
+  font-size: 0.95rem;
+  line-height: 1.6;
+}
+
+.specs-content {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.spec-item {
+  display: flex;
+  align-items: center;
+}
+
+.spec-label {
+  font-weight: 500;
+  min-width: 100px;
+  color: #555;
+  font-size: 0.9rem;
+}
+
+.spec-value {
+  margin-left: 12px;
+  font-size: 0.95rem;
+}
+
+.compact-tab {
+  font-size: 0.75rem;
+  letter-spacing: normal;
+  text-transform: none;
+  padding: 0 8px;
+}
+
+/* Адаптивные стили для разных устройств */
+@media (max-width: 992px) {
+  .tab-content-card {
+    min-height: 165px;
+  }
+}
+
+@media (max-width: 768px) {
+  .product-tabs-container {
+    margin-top: 10px;
+  }
+  
+  .tab-content-card {
+    min-height: 160px;
+    padding: 8px;
+  }
+  
+  .description-text {
+    font-size: 0.9rem;
+    line-height: 1.5;
+  }
+  
+  .spec-label {
+    min-width: 90px;
+    font-size: 0.85rem;
+  }
+  
+  .spec-value {
+    font-size: 0.9rem;
+    margin-left: 10px;
+  }
+}
+
+@media (max-width: 600px) {
+  .tab-content-card {
+    min-height: 150px;
+    padding: 8px 6px;
+  }
+  
+  .specs-content {
+    gap: 10px;
+  }
+  
+  .spec-label {
+    min-width: 80px;
+    font-size: 0.8rem;
+  }
+  
+  .spec-value {
+    font-size: 0.85rem;
+    margin-left: 8px;
+  }
+  
+  .compact-tab {
+    font-size: 0.7rem;
+    padding: 0 4px;
+  }
+}
+
+@media (max-width: 480px) {
+  .product-tabs-container {
+    margin-top: 8px;
+  }
+  
+  .tab-content-card {
+    min-height: auto; /* Изменено с фиксированной высоты */
+    padding: 6px;
+  }
+  
+  .tab-content {
+    padding: 6px;
+  }
+  
+  .description-text {
+    font-size: 0.85rem;
+    line-height: 1.4;
+  }
+  
+  .spec-item {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 2px;
+  }
+  
+  .spec-label {
+    min-width: auto;
+    font-size: 0.8rem;
+  }
+  
+  .spec-value {
+    font-size: 0.8rem;
+    margin-left: 0;
+  }
+  
+  .compact-tab {
+    min-width: 60px !important;
+    height: 20px !important;
+    font-size: 0.65rem;
+  }
+}
+
+@media (max-width: 360px) {
+  .description-text {
+    font-size: 0.8rem;
+  }
+  
+  .spec-label, .spec-value {
+    font-size: 0.75rem;
+  }
+  
+  .compact-tab {
+    font-size: 0.6rem;
+    min-width: 50px !important;
+  }
+}
